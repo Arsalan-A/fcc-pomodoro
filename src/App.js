@@ -1,7 +1,9 @@
+import Pomodoro from './Pomodoro';
+
 function App() {
   return (
     <div className='App'>
-      <h1>Pomodoro</h1>
+      <Pomodoro></Pomodoro>
     </div>
   );
 }
