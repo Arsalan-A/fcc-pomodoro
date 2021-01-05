@@ -20,6 +20,12 @@
   flex-direction: column;
   align-items: center;
   grid-area: timer;
+  height: 350px;
+  width: 350px;
+  padding: 6rem;
+
+  border: 3px solid black;
+  border-radius: 50%;
 }
 
 .break-container {
@@ -42,4 +48,19 @@
   flex-direction: column;
   align-items: center;
   grid-area: session;
+}
+
+.timer-container input {
+  width: 180px;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+
+.timer-container label {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }

@@ -7,7 +7,7 @@ function Pomodoro() {
         <label id='timer-label' htmlFor='timer'>
           Session
         </label>
-        <input name='timer' type='text' disabled />
+        <input name='timer' type='text' value='25:00' disabled />
       </div>
 
       <div className='btn-container'>
