@@ -1,53 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  align-items: center;
+  height: 100vh;
+}
+
+.bg-container {
+  display: flex;
+  margin: 0 auto;
+  background: #03011f;
+  height: 90vh;
+  width: 90%;
+  border-radius: 50px;
+}
 .container {
   display: grid;
   justify-items: center;
   gap: 1.5rem;
-  width: 600px;
+  width: 400px;
   grid-template-areas:
-    'timer timer timer'
-    'break btns session';
-  margin: 10rem auto;
+    'timer timer'
+    'break session';
+  margin: auto;
 }
 
 .timer-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   grid-area: timer;
-  height: 350px;
-  width: 350px;
-  padding: 6rem;
-
-  border: 3px solid black;
+  height: 400px;
+  width: 400px;
+  /* padding: 6rem; */
+  border: 7px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   border-radius: 50%;
-}
-
-.break-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: break;
-}
-
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  grid-area: btns;
-}
-
-.session-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: session;
 }
 
 .timer-container input {
@@ -60,7 +58,84 @@
 }
 
 .timer-container label {
-  font-size: 2rem;
+  font-size: 2.3rem;
+  color: #030120;
   margin-bottom: 1rem;
   font-weight: bold;
+}
+
+.break-container {
+  grid-area: break;
+}
+
+.break-container input,
+.session-container input {
+  width: 87px;
+  padding: 0.75rem;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+.break-container label,
+.session-container label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.break-container button,
+.session-container button {
+  padding: 0.75rem 2rem 0.75rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.break-container svg,
+.session-container svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 0.75rem;
+  grid-area: btns;
+}
+
+.btn-container button {
+  width: 90px;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.break-container,
+.session-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: break;
+  background-color: #ffffff;
+  padding: 2rem;
+  height: 260px;
+  border-radius: 10px;
+}
+
+.session-container {
+  grid-area: session;
+}
+
+button {
+  background: #5e6bf2;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #434db1;
+  transition: background 0.7s;
 }
