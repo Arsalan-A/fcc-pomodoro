@@ -14,17 +14,40 @@ body {
 
 .bg-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   background: #03011f;
-  height: 90vh;
+  height: 92vh;
   width: 90%;
   border-radius: 50px;
 }
+
+.bg-container > p {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f3f3f3;
+  text-align: center;
+  display: inline-block;
+  margin-top: 3rem;
+}
+
+.line {
+  display: inline-block;
+  background: #5e6bf2;
+  width: 20%;
+  height: 3px;
+  margin: 0 0.5rem 0.3rem 0.5rem;
+}
+
 .container {
   display: grid;
-  justify-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
-  width: 400px;
+  width: 50%;
   grid-template-areas:
     'timer timer'
     'break session';
@@ -48,10 +71,11 @@ body {
   border-radius: 50%;
 }
 
-.timer-container input {
+.timer-container p {
   width: 180px;
+  color: #5b5b5b;
   text-align: center;
-  font-size: 4rem;
+  font-size: 2.75rem;
   font-weight: bold;
   background: none;
   border: none;
@@ -66,6 +90,8 @@ body {
 
 .break-container {
   grid-area: break;
+  padding: 1.5rem;
+  width: 190px;
 }
 
 .break-container input,
@@ -80,6 +106,7 @@ body {
 
 .break-container label,
 .session-container label {
+  color: #3e3e3e;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -120,13 +147,15 @@ body {
   align-items: center;
   grid-area: break;
   background-color: #ffffff;
-  padding: 2rem;
+
   height: 260px;
   border-radius: 10px;
 }
 
 .session-container {
   grid-area: session;
+  padding: 1.5rem;
+  width: 190px;
 }
 
 button {
@@ -138,4 +167,42 @@ button {
 button:hover {
   background: #434db1;
   transition: background 0.7s;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .container {
+    gap: 1rem;
+  }
+  .timer-container {
+    height: 300px;
+    width: 300px;
+  }
+  .timer-container p {
+    width: 100px;
+    font-size: 2rem;
+  }
+
+  .timer-container label {
+    font-size: 2rem;
+  }
+
+  .bg-container > p {
+    font-size: 1.2rem;
+  }
+  .line {
+    width: 50px;
+  }
+
+  .break-container,
+  .session-container {
+    padding: 0.75rem;
+    width: 142px;
+    height: 230px;
+    border-radius: 10px;
+  }
+
+  .break-container label,
+  .session-container label {
+    font-size: 1rem;
+  }
 }
